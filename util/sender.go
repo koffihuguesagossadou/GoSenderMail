@@ -50,7 +50,7 @@ func EmailSenderFuncsWithTemp(path string, receiver string) {
 		fmt.Println(err)
 	}
 
-	err = mTemplate.Execute(&body, struct{Name string}{Name: "Hugo"})
+	err = mTemplate.Execute(&body, struct{ Name string }{ Name: "Hugo" })
 
 	if err != nil{
 		fmt.Println(err)
